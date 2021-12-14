@@ -1,0 +1,46 @@
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <img src="{{selectedRecipe?.imagePath}}" alt="" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{selectedRecipe?.name}}</h1>
+  </div>
+  <div class="col-xs-12">
+    <button class="btn btn-success">To Shopping List</button>
+    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-danger">Delete</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{selectedRecipe?.description}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Ingredients
+  </div>
+</div> -->
+
+<form (ngSubmit)='addRecipe()' [formGroup]='recipeFormValue'>
+  Recipe Name:<input type="text" formControlName='recipeName'/>
+  <br/>
+  Recipe Description:<input type="text" formControlName='description'/>
+  <br/>
+  Image URL:<input type='text' formControlName='imageURL'/>
+  <br/>
+  Price: <input type='text' formControlName='price'/>
+  <br/>
+  Offer date:<input type="date" formControlName='offerdate'/>
+  <br/>
+  Offer date expiry:<input type="date" formControlName='offerExpiryDate'/>
+   <br/>
+  Text Limit: <input type="number" formControlName='limit'/>
+    <br/>
+    Recipe Details:<input type="text" formControlName='details'/>
+  <br/>>
+  <button [disabled]='recipeFormValue.invalid'>Add Recipe</button>
+</form>
