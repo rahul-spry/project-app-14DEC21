@@ -1,0 +1,16 @@
+<a href="#" class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{recipe.recipeName}}</h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+    <p class="list-group-item-text">{{recipe.price | currency : 'INR'}}</p>
+    <p class="list-group-item-text">{{recipe.offerdate | date : 'MM/yy'}}</p>
+    <p class="list-group-item-text">{{recipe.offerdate | date : 'MM/yy'}}</p>
+    <p class="list-group-item-text">{{recipe.offerExpiryDate | date : 'dd/MM/YY'}}</p>
+    <p class="list-group-item-text">{{recipe.details | summary : recipe.limit}}</p>
+  </div>
+  <span class="pull-right">
+      <img class="img-responsive"
+           src="{{recipe.imagePath}}"
+           style="max-height: 50px;"/>
+  </span>
+</a>
